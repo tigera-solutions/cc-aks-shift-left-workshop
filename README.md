@@ -1,6 +1,6 @@
 # Microsoft Azure: Hands-on AKS workshop </br> Shift-left security with Vulnerability Management in AKS and Calico Cloud
 
-![cc_calico](https://github.com/tigera-solutions/cc-aks-shift-left-workshop/assets/117195889/27f3fdcd-f60b-4c3a-80f4-335f4fe00d65)
+![cc_calico](https://github.com/tigera-solutions/cc-aks-shift-left-workshop/assets/117195889/27f3fdcd-f60b-4c3a-80f4-335f4fe00d65 =3000x300)
 
 
 ## Welcome
