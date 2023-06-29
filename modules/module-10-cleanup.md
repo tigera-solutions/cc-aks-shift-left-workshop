@@ -1,4 +1,4 @@
-# Module 11 - Clean up
+# Module 10 - Clean up
 
 1. Delete the example application stacks and namespaces.
 
@@ -30,6 +30,6 @@
 
 ---
 
-[:arrow_left: Module 10 - Traffic visualization inside your Kubernetes Cluster](module-10-visibility.md) <br>
+[:arrow_left: Module 9 - Traffic visualization inside your Kubernetes Cluster](module-9-visibility.md) <br>
 
 [:leftwards_arrow_with_hook: Back to Main](../README.md)

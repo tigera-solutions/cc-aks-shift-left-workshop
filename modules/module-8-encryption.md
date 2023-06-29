@@ -1,4 +1,4 @@
-# Module 9 - Enabling End to End Encryption with WireGuard
+# Module 8 - Enabling End to End Encryption with WireGuard
 
 ## Installing WireGuard
 
@@ -185,8 +185,8 @@ The Dashboard should now show the Wireguard stastics:
 
 [Install Wireguard](https://www.wireguard.com/install/)
 
-[:arrow_right: Module 10 - Traffic visualization inside your Kubernetes Cluster](module-10-visibility.md) <br>
+[:arrow_right: Module 9 - Traffic visualization inside your Kubernetes Cluster](module-9-visibility.md) <br>
 
-[:arrow_left: Module 8 - Zero-trust access control using Network Policy Recommender](module-8-zerotrust.md)
+[:arrow_left: Module 7 - Zero-trust access control using Network Policy Recommender](module-7-zerotrust.md)
 
 [:leftwards_arrow_with_hook: Back to Main](../README.md)

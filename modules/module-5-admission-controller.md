@@ -139,7 +139,7 @@
    
    --- 
 
-[:arrow_right: Module 6 - In-cluster Image Scanning](module-6-inclusterscanning.md ) <br>
+[:arrow_right: Module 6 - Runtime security with IDS/IPS using Deep Packet Inspection](module-6-runtimesec.md ) <br>
 
 [:arrow_left: Module 4 - Scan Container Images](module-4-scan-images.md)
 

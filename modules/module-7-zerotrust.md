@@ -1,4 +1,4 @@
-# Module 8 - Zero-trust access control using Network Policy Recommender
+# Module 7 - Zero-trust access control using Network Policy Recommender
 
 Reduce the attack surface of the application by implementing a zero-trust security policy.
 
@@ -126,8 +126,8 @@ We recommend that you create a global default deny policy after you complete wri
 
 3. Use the Calico Cloud GUI to enforce the default-deny staged policy. After enforcing a staged policy, it takes effect immediatelly. The default-deny policy will start to actually deny traffic.
 
-[:arrow_right: Module 9 - Enabling End to End Encryption with WireGuard](module-9-encryption.md) <br>
+[:arrow_right: Module 8 - Enabling End to End Encryption with WireGuard](module-8-encryption.md) <br>
 
-[:arrow_left: Module 7 - Runtime security with IDS/IPS using Deep Packet Inspection](module-7-runtimesec.md)
+[:arrow_left: Module 6 - Runtime security with IDS/IPS using Deep Packet Inspection](module-6-runtimesec.md)
 
 [:leftwards_arrow_with_hook: Back to Main](../README.md)

@@ -27,7 +27,6 @@ The estimated time to complete this workshop is 90-120 minutes.
 Learn how to build a security moat around your workloads by:
 
 - Scanning container images and blocking deployment based on your security criteria during build time.
-- Enabling in-cluster image scanning to proactively and iteratively allow clusters to always scan images and workloads in the background
 - Implementing runtime security with IDS/IPS using DPI and then using the network policy recommender to develop a zero-trust default-deny approach
 - Encrypting inter-node pod-to-pod traffic in a cluster as best practice using Wireguard
 - Getting visibility inside your Kubernetes cluster traffic to troubleshoot and improve security posture
@@ -41,12 +40,11 @@ Module 2 - [Deploy an AKS cluster](modules/module-2-deploy-aks.md)</br>
 Module 3 - [Connect the cluster to Calico Cloud](modules/module-3-connect-calicocloud.md)</br>
 Module 4 - [Scan Container Images](modules/module-4-scan-images.md)</br>
 Module 5 - [Calico Cloud Admission Controller](modules/module-5-admission-controller.md)</br>
-Module 6 - [In-cluster Image Scanning](modules/module-6-inclusterscanning.md)</br>
-Module 7 - [Runtime security with IDS/IPS using Deep Packet Inspection](modules/module-7-runtimesec.md)</br>
-Module 8 - [Zero-trust access control using Network Policy Recommender](modules/module-8-zerotrust.md)</br>
-Module 9 - [Enabling End to End Encryption with WireGuard](modules/module-9-encryption.md)</br>
-Module 10 - [Traffic visualization inside your Kubernetes Cluster](modules/module-10-visibility.md)</br>
-Module 11 - [Clean up](modules/module-11-cleanup.md)</br>
+Module 6 - [Runtime security with IDS/IPS using Deep Packet Inspection](modules/module-6-runtimesec.md)</br>
+Module 7 - [Zero-trust access control using Network Policy Recommender](modules/module-7-zerotrust.md)</br>
+Module 8 - [Enabling End to End Encryption with WireGuard](modules/module-8-encryption.md)</br>
+Module 9 - [Traffic visualization inside your Kubernetes Cluster](modules/module-9-visibility.md)</br>
+Module 10 - [Clean up](modules/module-10-cleanup.md)</br>
 
 ---
 

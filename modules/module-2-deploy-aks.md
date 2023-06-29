@@ -155,6 +155,12 @@ kubectl apply -f manifests/04-applayer.yml
 kubectl apply -f manifests/20-dev-app.yaml
 ```
 
+Enable L7 logs for the nginx service
+
+```bash
+kubectl annotate svc nginx-svc -n dev projectcalico.org/l7-logging=true
+```
+
 ---
 
 [:arrow_right: Module 3 - Connect the cluster to Calico Cloud](module-3-connect-calicocloud.md) <br>

@@ -1,4 +1,4 @@
-# Module 7 - Runtime security with IDS/IPS using Deep Packet Inspection
+# Module 6 - Runtime security with IDS/IPS using Deep Packet Inspection
 
 Calico pinpoints the source of malicious activity, uses machine learning to identify anomalies, creates a security moat
 around critical workloads, deploys honeypods to capture zero-day attacks, and automatically quarantines potentially
@@ -71,8 +71,8 @@ Next, we can take action in securing our nginx pod with a zero-trust approach us
 
 ---
 
-[:arrow_right: Module 8 - Zero-trust access control using Network Policy Recommender](module-8-zerotrust.md) <br>
+[:arrow_right: Module 7 - Zero-trust access control using Network Policy Recommender](module-7-zerotrust.md) <br>
 
-[:arrow_left: Module 6 - In-cluster Image Scanning](module-6-inclusterscanning.md)
+[:arrow_left: Module 5 - Calico Cloud Admission Controller](module-5-admission-controller.md)
 
 [:leftwards_arrow_with_hook: Back to Main](../README.md)
