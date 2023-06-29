@@ -12,8 +12,8 @@
    ``` 
 
    ```bash
-   export RESOURCE_GROUP=rg-zero-trust-workshop
-   export CLUSTERNAME=aks-zero-trust-workshop
+   export RESOURCE_GROUP=rg-shift-left-workshop
+   export CLUSTERNAME=aks-shift-left-workshop
    export LOCATION=canadacentral
    # Persist for later sessions in case of disconnection.
    echo export RESOURCE_GROUP=$RESOURCE_GROUP >> envLabVars.env
@@ -38,7 +38,7 @@
      --kubernetes-version 1.25 \
      --location $LOCATION \
      --node-count 2 \
-     --node-vm-size Standard_B2ms \
+     --node-vm-size Standard_B4ms \
      --max-pods 100 \
      --generate-ssh-keys \
      --network-plugin azure
@@ -144,18 +144,21 @@ kubectl patch felixconfiguration default -p '{"spec":{"flowLogsCollectTcpStats":
 Deploy the dev app stack
 
 ```bash
-kubectl apply -f manifests/dev-app-manifest.yaml
+kubectl apply -f manifests/00-namespaces.yaml
 ```
- 
-Deploy the Online Boutique app stack
 
 ```bash
-kubectl apply -f manifests/kubernetes-manifests.yaml
+kubectl apply -f manifests/04-applayer.yml
+```
+
+```bash
+kubectl apply -f manifests/20-dev-app.yaml
 ```
 
 ---
 
-[:arrow_right: Module 3 - Connect the Azure AKS cluster to Calico Cloud](/modules/module-3-connect-calicocloud.md) <br>
+[:arrow_right: Module 3 - Connect the cluster to Calico Cloud](module-3-connect-calicocloud.md) <br>
 
-[:arrow_left: Module 1 - Getting Started](/modules/module-1-getting-started.md)  
-[:leftwards_arrow_with_hook: Back to Main](/README.md)  
+[:arrow_left: Module 1 - Getting Started](module-1-getting-started.md)
+
+[:leftwards_arrow_with_hook: Back to Main](../README.md)  

@@ -1,4 +1,4 @@
-# Module 6 - Calico Cloud In-Cluster Image Scanning
+# Module 6 - In-Cluster Image Scanning
 
 Calico Cloud also includes an in-cluster image scanner for strengthening the security posture of the cluster for use-cases where the image scanner build/deploy process might get bypassed by a team with escalated privileges or is a good starting point to understand the security posture of a cluster that already has running workloads to allow teams to focus their efforts on the significant vulnerable images. 
 
@@ -67,3 +67,9 @@ aks-nodepool1-24664026-vmss000001   Ready    agent   7h15m   v1.25.6   10.224.0.
   ```
 
 - Now you can check in the Image Assurance UI for all the images in ithe cluster scanned by the in-cluster scanner that show up that weren't actually scanned by the CLI scanner before manually.
+
+[:arrow_right: Module 7 - Runtime security with IDS/IPS using Deep Packet Inspection](module-7-runtimesec.md) <br>
+
+[:arrow_left: Module 5 - Calico Cloud Admission Controller](module-5-admission-controller.md)
+
+[:leftwards_arrow_with_hook: Back to Main](../README.md)

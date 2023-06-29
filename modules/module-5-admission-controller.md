@@ -1,6 +1,6 @@
-# Module 4 - Calico Cloud Admission Controller
+# Module 5 - Calico Cloud Admission Controller
 
-1. Upgrade the OpenSSL from 1.0 to 1.1
+1. Upgrade the OpenSSL from 1.0 to 1.1 (if needed in your environment)
 
    ```bash
    sudo yum -y update
@@ -21,16 +21,16 @@
    Configure the Admission Controller.
    
    ```bash
-   # create workdir
+   # Create workdir
    mkdir admission-controller-install && cd admission-controller-install
-   # generate certs
-   export URL="https://installer.calicocloud.io/manifests/v3.16.1-0/manifests" && curl ${URL}/generate-open-ssl-key-cert-pair.sh | bash
-   # generate admission controller manifest
-   export URL="https://installer.calicocloud.io/manifests/v3.16.1-0/manifests" && \
+   # Generate certs
+   export URL="https://installer.calicocloud.io/manifests/v3.16.1-11/manifests" && curl ${URL}/generate-open-ssl-key-cert-pair.sh | bash
+   # Generate admission controller manifests
+   export URL="https://installer.calicocloud.io/manifests/v3.16.1-11/manifests" && \
    export IN_NAMESPACE_SELECTOR_KEY="apply-container-policies" && \
    export IN_NAMESPACE_SELECTOR_VALUES="true" && \
    curl ${URL}/install-ia-admission-controller.sh | bash
-   # install admission controller
+   # Install admission controller
    kubectl apply -f ./tigera-image-assurance-admission-controller-deploy.yaml && cd ..
    ```
 
@@ -123,7 +123,8 @@
    
    --- 
 
-[:arrow_right: Module 5 - Zero-trust access control using identity-aware microsegmentation](/modules/module-5-zero-trust.md ) <br>
+[:arrow_right: Module 6 - In-cluster Image Scanning](module-6-inclusterscanning.md ) <br>
 
-[:arrow_left: Module 3 - Scan Container Images](/modules/module-3-scan-images.md)   
-[:leftwards_arrow_with_hook: Back to Main](/README.md)  
+[:arrow_left: Module 4 - Scan Container Images](module-4-scan-images.md)
+
+[:leftwards_arrow_with_hook: Back to Main](../README.md)

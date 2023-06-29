@@ -1,4 +1,4 @@
-# Module 8 - Enabling End to End Encryption with WireGuard
+# Module 9 - Enabling End to End Encryption with WireGuard
 
 ## Installing WireGuard
 
@@ -166,21 +166,17 @@ spec:
       - 9091
 EOF
 ```
-> Manifest File: [6.1-enable-wireguard-statistics.yaml](manifests/6.1-enable-wireguard-statistics.yaml)
+> Manifest File: [50-enable-wireguard-statistics.yaml](manifests/50-enable-wireguard-statistics.yaml)
 
 
 And now we should be able to see the Wireguard stats on the Calico Cloud dashboard by enabling them through the configuration menu:
 
-<p align="center">
-  <img src="images/dashboard-config.png" alt="Dashboard Config" align="center" width="300">
-</p>
+
 
 
 The Dashboard should now show the Wireguard stastics:
 
-<p align="center">
-  <img src="images/wireguard-stats.png" alt="Wireguard Stats" align="center" width="900">
-</p>
+
 
 
 #### Reference Documentation
@@ -189,8 +185,8 @@ The Dashboard should now show the Wireguard stastics:
 
 [Install Wireguard](https://www.wireguard.com/install/)
 
-[:arrow_right:7. Audit Logs](../7.%20Audit/readme.md)<br>
+[:arrow_right: Module 10 - Traffic visualization inside your Kubernetes Cluster](module-10-visibility.md) <br>
 
-[:arrow_left:5. Reports and Visibility](../5.%20Reports/readme.md)
+[:arrow_left: Module 8 - Zero-trust access control using Network Policy Recommender](module-8-zerotrust.md)
 
-[:leftwards_arrow_with_hook: Back to Main](../README.md)  
+[:leftwards_arrow_with_hook: Back to Main](../README.md)

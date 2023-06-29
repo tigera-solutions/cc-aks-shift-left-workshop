@@ -26,7 +26,7 @@
 
 ## Pull the images to be scanned
 
-Lets pull two images:
+Lets pull an image:
 
 1. Pull the website image website:v1.0.0
 
@@ -130,7 +130,8 @@ Lets pull two images:
 
 --- 
 
-[:arrow_right: Module 4 - Calico Cloud Admission Controller](/modules/module-4-admission-controller.md) <br>
+[:arrow_right: Module 5 - Calico Cloud Admission Controller](module-5-admission-controller.md) <br>
 
-[:arrow_left: Module 2 - Create an AKS cluster and Connect it to Calico Cloud](./modules/module-2-create-eks.md)  
-[:leftwards_arrow_with_hook: Back to Main](/README.md)  
+[:arrow_left: Module 3 - Connect the cluster to Calico Cloud](module-3-connect-calicocloud.md)
+
+[:leftwards_arrow_with_hook: Back to Main](../README.md)  

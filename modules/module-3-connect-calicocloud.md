@@ -1,7 +1,7 @@
-# Module 3 - Connect your AKS cluster to Calico Cloud
+# Module 3 - Connect the cluster to Calico Cloud
 
 > **Note**: In order to complete this module, you will need to a [Calico Cloud account](https://www.calicocloud.io/). If you are participating in a live workshop, you will receive an invite with the information to login into an active Calico Cloud environment and join your AKS cluster in there.  
-If you are running this workshop in a self-paced mode, you can create an Calico Cloud environment following the steps [here](/modules/submodule-3.1-create-calicloud.md).  
+If you are running this workshop in a self-paced mode, you can create an Calico Cloud environment following the steps [here](submodule-3.1-create-calicloud.md).  
 
 Issues with being unable to navigate menus in the UI are often due to browsers blocking scripts - please ensure that you disabled all blocker scripts.
 
@@ -93,7 +93,8 @@ When you change the cluster, the whole Calico Cloud context will change immediat
 
 --- 
 
-[:arrow_right: Module 4 - Zero Trust Workload Access Control](/modules/module-4-workload-access-control.md)   <br>
+[:arrow_right: Module 4 - Scan Container Images](module-4-scan-images.md)   <br>
 
-[:arrow_left: Module 2 - Deploy an Azure AKS cluster](/modules/module-2-deploy-aks.md)  
-[:leftwards_arrow_with_hook: Back to Main](/README.md)  
+[:arrow_left: Module 2 - Deploy an AKS cluster](module-2-deploy-aks.md)
+
+[:leftwards_arrow_with_hook: Back to Main](../README.md)  

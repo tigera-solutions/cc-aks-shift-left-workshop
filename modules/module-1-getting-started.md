@@ -66,6 +66,6 @@ The following are the basic requirements to **start** the workshop.
 
 ---
 
-[:arrow_right: Module 2 - Deploy an Azure AKS cluster](/modules/module-2-deploy-aks.md) <br>
+[:arrow_right: Module 2 - Deploy an AKS cluster](module-2-deploy-aks.md) <br>
  
-[:leftwards_arrow_with_hook: Back to Main](/README.md)  
+[:leftwards_arrow_with_hook: Back to Main](../README.md)
