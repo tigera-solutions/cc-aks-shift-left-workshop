@@ -21,7 +21,10 @@ Issues with being unable to navigate menus in the UI are often due to browsers b
 
    The Connect Cluster window will allow you to choose a name to identify your cluster in Calico Cloud and select which platform you are running the cluster on. The next window presents a link for you to review the cluster requirements for Calico Cloud. A kubectl command to run the installation script will be generated, you need to copy and apply this command in your cluster.
 
-2. Run the installation script in your cluster. Script should look similar to this:
+   ![add-managed-cluster](https://github.com/tigera-solutions/cc-aks-shift-left-workshop/assets/117195889/bef4e5e2-5824-48da-b198-ade0a73ad346)
+
+
+3. Run the installation script in your cluster. Script should look similar to this:
     
     <pre>
     kubectl apply -f https://installer.calicocloud.io/manifests/cc-operator/late
@@ -72,6 +75,8 @@ Issues with being unable to navigate menus in the UI are often due to browsers b
     You can also monitor your cluster installation on the Calico Cloud UI. Go to the "**Managed Clusters**" section, select your cluster and expand the timestamp dropdown to see the installation logs.
     In a few minutes the status will change from **Installing** to **Done**. Congratulations! You successfully connected your cluster to Calico Cloud.
 
+    ![monitor-install](https://github.com/tigera-solutions/cc-aks-shift-left-workshop/assets/117195889/978cb58e-85b6-43b0-a32e-90850684e78f)
+
     
 
 ## STEP 3 - Selecting your cluster.
@@ -86,10 +91,11 @@ You can switch between clusters by following the steps below:
 
 3. Select your recently added cluster.
 
-   
+   ![select-cluster](https://github.com/tigera-solutions/cc-aks-shift-left-workshop/assets/117195889/4b6b5957-bf7c-4373-aa04-2d38f1eb2601)
+
 
 The "**Cluster**" dropdown button will be always visible accross the Calico Cloud UI, no matter which section you are viewing. You can change the cluster you want to interact with at any moment. 
-When you change the cluster, the whole Calico Cloud context will change immediatelly to reflect the information regarding the current selected cluster.
+When you change the cluster, the whole Calico Cloud context will change immediately to reflect the information regarding the current selected cluster.
 
 --- 
 
