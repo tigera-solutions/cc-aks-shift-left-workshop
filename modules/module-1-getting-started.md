@@ -1,6 +1,6 @@
 # Module 1 - Getting Started
 
-## Prerequisites 
+## Prerequisites
 
 The following are the basic requirements to **start** the workshop.
 
@@ -29,21 +29,25 @@ The following are the basic requirements to **start** the workshop.
 5. Ensure you are using the correct Azure subscription you want to deploy AKS to.
 
    View subscriptions
+
    ```bash
    az account list
    ```
 
    Verify selected subscription
+
    ```bash
    az account show
    ```
 
    Set correct subscription (if needed)
+
    ```bash
    az account set --subscription <subscription_id>
    ```
-   
+
    Verify correct subscription is now set
+
    ```bash
    az account show
    ```
@@ -67,5 +71,5 @@ The following are the basic requirements to **start** the workshop.
 ---
 
 [:arrow_right: Module 2 - Deploy an AKS cluster](module-2-deploy-aks.md) <br>
- 
+
 [:leftwards_arrow_with_hook: Back to Main](../README.md)

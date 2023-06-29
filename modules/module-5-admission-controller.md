@@ -17,10 +17,11 @@
 2. Configure the Admission Controller.
 
    Calico Cloud uses the Admission Controller to accept or reject resources that create pods based on configured ContainerAdmissionPolicies    rules. For more information refer to Calico Cloud Admission Controller documentation.
-   
+
    Configure the Admission Controller.
 
    Instructions for **Linux**:
+
    ```bash
    # Create workdir
    mkdir admission-controller-install && cd admission-controller-install
@@ -36,6 +37,7 @@
    ```
 
    Instructions for **MacOS**:
+
    ```bash
    # Create workdir
    mkdir admission-controller-install && cd admission-controller-install
@@ -101,11 +103,11 @@
    ```
 
    The deployment will fail to be created. The result will be similar to the below
-   
+
    <pre>
    $ kubectl create -f manifests/website.yaml
-   service/website created 
-   Error from server (Action 'Reject' enforced by ContainerPolicy reject-failed-and-non-dockerhub rule index 1): 
+   service/website created
+   Error from server (Action 'Reject' enforced by ContainerPolicy reject-failed-and-non-dockerhub rule index 1):
    error when creating "./manifests/website.yaml": admission webhook "image-assurance.tigera.io" denied the request:
    Action 'Reject' enforced by ContainerPolicy reject-failed-and-non-dockerhub rule index 1
    </pre>

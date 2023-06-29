@@ -8,7 +8,7 @@
    ```
 
 2. Delete the AKS cluster.
-   
+
    ```bash
    az aks delete \
      --resource-group $RESOURCE_GROUP \
@@ -16,7 +16,7 @@
    ```
 
 3. Delete the resource group.
-   
+
    ```bash
    az group delete \
      --name $RESOURCE_GROUP

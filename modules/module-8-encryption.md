@@ -6,33 +6,37 @@ Before enabling end-to-end encryption with Calico, you must first install WireGu
 
 Before enabling the encryption feature, test to ensure that the wireguard module is loaded on each of the 2 worker nodes:
 
-
 Get the first node's nodemane and save it to a variable
-```
+
+```bash
 NODE_NAME=$(kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="Hostname")].address}'| awk '{print $1;}')
 ```
 
 This command starts a privileged container on your node and connects to it over SSH:
+
 ```bash
 kubectl debug node/$NODE_NAME -it --image=mcr.microsoft.com/aks/fundamental/base-ubuntu:v0.0.11
 ```
+
 Output will be like:
 
 ```bash
 Creating debugging pod node-debugger-aks-nodepool1-41939440-vmss000001-c9bjq with container debugger on node aks-nodepool1-41939440-vmss000001.
 If you don't see a command prompt, try pressing enter.
 ```
+
 Interact with the node session by running chroot /host from the privileged container.
-```
+
+```bash
 root@aks-nodepool1-37054976-vmss000002:/# chroot /host
 #
 ```
+
 Run the following command:
 
-```
+```bash
 lsmod | grep wireguard
 ```
-
 
 The output should look something like this:
 
@@ -67,7 +71,7 @@ Which will give us the following output showing the nodes Wireguard public key
 
 On each node we can also view the new interface created by Wireguard:
 
-```
+```bash
 root@aks-nodepool1-37054976-vmss000002:/# ip a | grep wireguard
 wireguard.cali: flags=209<UP,POINTOPOINT,RUNNING,NOARP>  mtu 1340
 ```
@@ -77,6 +81,7 @@ wireguard.cali: flags=209<UP,POINTOPOINT,RUNNING,NOARP>  mtu 1340
 With end-to-end encryption enabled the next step is to enable statistics gathering in Prometheus. 
 
 First, we'll patch the Tigera Operator to enable the 'nodeMetricsPort':
+
 ```bash
 kubectl patch installation.operator.tigera.io default --type merge -p '{"spec":{"nodeMetricsPort":9091}}'
 ```
@@ -166,18 +171,11 @@ spec:
       - 9091
 EOF
 ```
+
 > Manifest File: [50-enable-wireguard-statistics.yaml](manifests/50-enable-wireguard-statistics.yaml)
 
-
-And now we should be able to see the Wireguard stats on the Calico Cloud dashboard by enabling them through the configuration menu:
-
-
-
-
-The Dashboard should now show the Wireguard stastics:
-
-
-
+And now we should be able to see the Wireguard stats on the Calico Cloud dashboard by enabling them through the configuration menu
+The Dashboard should now show the Wireguard stastics.
 
 #### Reference Documentation
 

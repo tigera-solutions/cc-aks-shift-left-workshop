@@ -8,10 +8,8 @@ Issues with being unable to navigate menus in the UI are often due to browsers b
 ## Step 1 - Accept the Invitation
 
 1. During the workshop, you will receive an invitation to connect to a Calico Cloud organization, just like in the picture below:
- 
-   
-2. Click on the link ACCEPT INVITATION and create an password to access the Calico Cloud.
 
+2. Click on the link ACCEPT INVITATION and create an password to access the Calico Cloud.
 
 3. Once you have access to your **Calico Cloud** environment, go to step 2:
 
@@ -23,9 +21,8 @@ Issues with being unable to navigate menus in the UI are often due to browsers b
 
    ![add-managed-cluster](https://github.com/tigera-solutions/cc-aks-shift-left-workshop/assets/117195889/bef4e5e2-5824-48da-b198-ade0a73ad346)
 
+2. Run the installation script in your cluster. Script should look similar to this:
 
-3. Run the installation script in your cluster. Script should look similar to this:
-    
     <pre>
     kubectl apply -f https://installer.calicocloud.io/manifests/cc-operator/late
     st/deploy.yaml && curl -H "Authorization: Bearer bxkrau8yk:jg3nzzzdm:mmzpsio
@@ -53,13 +50,13 @@ Issues with being unable to navigate menus in the UI are often due to browsers b
     secret/api-key created
     installer.operator.calicocloud.io/aks-cc-repo created
     </pre>
-    
+
     Joining the cluster to Calico Cloud can take a few minutes. Meanwhile the Calico resources can be monitored until they are all reporting `Available` as `True`
 
     ```bash
     kubectl get tigerastatus                                                                                                                    
     ```
-    
+
     > Output should look similar to:
     <pre>
     NAME                            AVAILABLE   PROGRESSING   DEGRADED   SINCE
@@ -77,8 +74,6 @@ Issues with being unable to navigate menus in the UI are often due to browsers b
 
     ![monitor-install](https://github.com/tigera-solutions/cc-aks-shift-left-workshop/assets/117195889/978cb58e-85b6-43b0-a32e-90850684e78f)
 
-    
-
 ## STEP 3 - Selecting your cluster.
 
 Once the installation is completed, you will be able to start interacting with your cluster from the Calico Cloud interface. Calico Cloud provides a single pane of glass for managing multiple clusters. If you followed the previous steps, you would have two clusters connected to Calico Cloud at this point: Your cluster and a pre-configured lab cluster that allows you to explore some of the features in Calico Cloud.
@@ -93,11 +88,10 @@ You can switch between clusters by following the steps below:
 
    ![select-cluster](https://github.com/tigera-solutions/cc-aks-shift-left-workshop/assets/117195889/4b6b5957-bf7c-4373-aa04-2d38f1eb2601)
 
-
 The "**Cluster**" dropdown button will be always visible accross the Calico Cloud UI, no matter which section you are viewing. You can change the cluster you want to interact with at any moment. 
 When you change the cluster, the whole Calico Cloud context will change immediately to reflect the information regarding the current selected cluster.
 
---- 
+---
 
 [:arrow_right: Module 4 - Scan Container Images](module-4-scan-images.md)   <br>
 

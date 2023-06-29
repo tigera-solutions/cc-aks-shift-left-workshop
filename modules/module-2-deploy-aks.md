@@ -7,9 +7,10 @@
    > source envLabVars.env
 
    Start in the root of the repository folder
+
    ```bash
    cd cc-aks-shift-left-workshop
-   ``` 
+   ```
 
    ```bash
    export RESOURCE_GROUP=rg-shift-left-workshop
@@ -22,15 +23,15 @@
    ```
 
 2. If not created, create the Resource Group in the desired Region.
-   
+
    ```bash
    az group create \
      --name $RESOURCE_GROUP \
      --location $LOCATION
    ```
-   
+
 3. Create the AKS cluster without a network plugin.
-   
+
    ```bash
    az aks create \
      --resource-group $RESOURCE_GROUP \
@@ -49,11 +50,13 @@
    ```bash
    az aks list -o table | grep $CLUSTERNAME
    ```
+
    Or
+
    ```bash
    watch az aks list -o table 
    ```
-   
+
    You may get an output like the following
 
    <pre>
@@ -63,7 +66,7 @@
    </pre>
 
 5. Get the credentials to connect to the cluster.
-   
+
    ```bash
    az aks get-credentials --resource-group $RESOURCE_GROUP --name $CLUSTERNAME
    ```
@@ -100,7 +103,7 @@
    You should now have a Kubernetes cluster running with 2 nodes. You do not see the master servers for the cluster because these are managed by Microsoft. The Control Plane services which manage the Kubernetes cluster such as scheduling, API access, configuration data store and object controllers are all provided as services to the nodes.
 
 7. Verify the settings required for Calico Cloud.
-   
+
    ```bash
    az aks show --resource-group $RESOURCE_GROUP --name $CLUSTERNAME --query 'networkProfile'
    ```
@@ -114,7 +117,7 @@
    VMSSNAME=$(az vmss list --output table | grep -i $RESOURCE_GROUP | awk -F ' ' '{print $1}')
    az vmss run-command invoke -g $VMSSGROUP -n $VMSSNAME --scripts "cat /etc/cni/net.d/*" --command-id RunShellScript --instance-id 0 --query 'value[0].message' --output table
    ```
-   
+
    > output should contain "mode": "transparent"
 
 ---

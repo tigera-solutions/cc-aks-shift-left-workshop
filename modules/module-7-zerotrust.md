@@ -51,7 +51,6 @@ We recommend that you create a global default deny policy after you complete wri
 
    The staged policy does not affect the traffic directly but allows you to view the policy impact if it were to be enforced. You can see the deny traffic in staged policy.
 
-
 2. Create other network policies to individually allow the traffic shown as blocked in step 1, until no connections are denied.
   
    First, create the policy tiers. Tiers are a hierarchical construct used to group policies and enforce higher precedence policies that cannot be circumvented by other teams. As you will learn in this tutorial, tiers have built-in features that support workload microsegmentation.
@@ -106,21 +105,20 @@ We recommend that you create a global default deny policy after you complete wri
    ```
 
    b. Test connectivity from namespace ```dev``` and ```default``` to the Internet. The expected result is `command terminated with exit code 1`.
-   
-   ```bash   
+
+   ```bash
    kubectl -n dev exec -t centos -- sh -c 'curl -m3 -sI http://www.google.com 2>/dev/null | grep HTTP'
    ```
 
-   ```bash   
+   ```bash
    kubectl -n default exec -t centos -- sh -c 'curl -m3 -sI http://www.google.com 2>/dev/null | grep HTTP'
    ```
-   
+
    c. As per the default deny, egress traffic from the ```centos``` pod in ```default``` namespace is also blocked so it can't connect to anything in the dev namespace.
-   
+
    ```bash
    kubectl exec -t centos -- sh -c 'curl -m3 -sI http://nginx-svc.dev 2>/dev/null | grep HTTP'
    ```
-
 
    d. Deploy the following global network policy in the security tier for allowing DNS access to all endpoints. In this way you don't need to create a rule allowing DNS traffic for every policy.
 
