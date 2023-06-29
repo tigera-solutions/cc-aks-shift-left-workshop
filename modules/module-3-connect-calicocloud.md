@@ -19,6 +19,10 @@ Issues with being unable to navigate menus in the UI are often due to browsers b
 
    The Connect Cluster window will allow you to choose a name to identify your cluster in Calico Cloud and select which platform you are running the cluster on. The next window presents a link for you to review the cluster requirements for Calico Cloud. A kubectl command to run the installation script will be generated, you need to copy and apply this command in your cluster.
 
+   > **Warning**
+   > Please choose a unique name with your alias or username for the cluster name as the workshop uses a shared Calico Cloud instance. 
+   > A good example: "cc-aks-myname-workshop"
+
    ![add-managed-cluster](https://github.com/tigera-solutions/cc-aks-shift-left-workshop/assets/117195889/bef4e5e2-5824-48da-b198-ade0a73ad346)
 
 2. Run the installation script in your cluster. Script should look similar to this:
