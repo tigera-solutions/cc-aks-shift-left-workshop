@@ -79,5 +79,5 @@ spec:
   - name: centos
     image: centos:latest
     command: [ "/bin/bash", "-c", "--" ]
-    args: [ "while true; do curl -m3 -A \"ReqBin Curl Client/1.0\" http://nginx-svc; sleep 10; done;" ]
+    args: [ "while true; do curl -m3 -A \"ReqBin Curl Client/1.0\" http://nginx-svc.dev; sleep 10; done;" ]
     resources: {}
