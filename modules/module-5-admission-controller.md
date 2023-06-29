@@ -19,7 +19,8 @@
    Calico Cloud uses the Admission Controller to accept or reject resources that create pods based on configured ContainerAdmissionPolicies    rules. For more information refer to Calico Cloud Admission Controller documentation.
    
    Configure the Admission Controller.
-   
+
+   Instructions for **Linux**:
    ```bash
    # Create workdir
    mkdir admission-controller-install && cd admission-controller-install
@@ -30,6 +31,21 @@
    export IN_NAMESPACE_SELECTOR_KEY="apply-container-policies" && \
    export IN_NAMESPACE_SELECTOR_VALUES="true" && \
    curl ${URL}/install-ia-admission-controller.sh | bash
+   # Install admission controller
+   kubectl apply -f ./tigera-image-assurance-admission-controller-deploy.yaml && cd ..
+   ```
+
+   Instructions for **MacOS**:
+   ```bash
+   # Create workdir
+   mkdir admission-controller-install && cd admission-controller-install
+   # Generate certs
+   export URL="https://installer.calicocloud.io/manifests/v3.16.1-11/manifests" && curl ${URL}/generate-open-ssl-key-cert-pair.sh | bash
+   # Generate admission controller manifests
+   export URL="https://installer.calicocloud.io/manifests/v3.16.1-11/manifests" && \
+   export IN_NAMESPACE_SELECTOR_KEY="apply-container-policies" && \
+   export IN_NAMESPACE_SELECTOR_VALUES="true" && \
+   bash install-ia-admission-controller-macos.sh
    # Install admission controller
    kubectl apply -f ./tigera-image-assurance-admission-controller-deploy.yaml && cd ..
    ```
