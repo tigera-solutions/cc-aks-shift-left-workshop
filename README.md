@@ -1,8 +1,5 @@
 # Microsoft Azure: Hands-on AKS workshop </br> Shift-left security with Vulnerability Management in AKS and Calico Cloud
 
-![cc_calico](https://github.com/tigera-solutions/cc-aks-shift-left-workshop/assets/117195889/27f3fdcd-f60b-4c3a-80f4-335f4fe00d65 =3000x300)
-
-
 ## Welcome
 
 In this AKS-focused workshop, you will work with Microsoft Azure and Calico Cloud to learn how to design and deploy best practices to secure your Kubernetes environment at build,deploy and runtime -  preventing, detecting and building a security moat around your workloads to protect from container and network-based attacks as early as possible in the development and early runtime phases.
