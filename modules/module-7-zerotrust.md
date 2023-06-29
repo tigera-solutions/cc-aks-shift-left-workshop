@@ -2,6 +2,30 @@
 
 Reduce the attack surface of the application by implementing a zero-trust security policy.
 
+By default, all traffic is allowed between the pods in a cluster. First, let's test connectivity between application components and across namespaces. All of these tests should succeed as there are no policies in place.
+
+a. Test connectivity between ```centos``` pod to the ```nginx``` pods within the same namespace. The expected result is `HTTP/1.1 200 OK`.
+
+   ```bash
+   kubectl -n dev exec -t centos -- sh -c 'curl -m3 -sI http://nginx-svc 2>/dev/null | grep HTTP'
+   ```
+
+b. Test connectivity across namespaces ```default/centos``` and ```dev/nginx```. The expected result is `HTTP/1.1 200 OK`.
+
+   ```bash
+   kubectl exec -t centos -- sh -c 'curl -m3 -sI http://nginx-svc.dev 2>/dev/null | grep HTTP'
+   ```
+
+c. Test connectivity from ```dev``` namespace and ```default``` namespace to the Internet. The expected result is `HTTP/1.1 200 OK`.
+
+   ```bash
+   kubectl -n dev exec -t centos -- sh -c 'curl -m3 -sI https://www.google.com 2>/dev/null | grep HTTP'
+   ```
+
+   ```bash
+   kubectl exec -t centos -- sh -c 'curl -m3 -sI https://www.google.com 2>/dev/null | grep HTTP'
+   ```
+
 Use the Security Policy Recommender to quickly create a security policy restricting ingress traffic from the ```netshoot``` pod in ```dev``` namespace to the vulnerable ```nginx``` pod
 
 We recommend that you create a global default deny policy after you complete writing policy for the traffic that you want to allow. Use the stage policy feature to get your allowed traffic working as expected, then lock down the cluster to block unwanted traffic.
