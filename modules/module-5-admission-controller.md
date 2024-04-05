@@ -104,13 +104,13 @@
 
    The deployment will fail to be created. The result will be similar to the below
 
-   <pre>
+   ```bash
    $ kubectl create -f manifests/website.yaml
    service/website created
    Error from server (Action 'Reject' enforced by ContainerPolicy reject-failed-and-non-dockerhub rule index 1):
    error when creating "./manifests/website.yaml": admission webhook "image-assurance.tigera.io" denied the request:
    Action 'Reject' enforced by ContainerPolicy reject-failed-and-non-dockerhub rule index 1
-   </pre>
+   ```
 
 6. Create the exceptions in the Calico Cloud UI.
 
@@ -127,21 +127,21 @@
 
     The image is accepted.
 
-    <pre>
+    ```bash
     $ kubectl apply -f manifests/website.yaml
     deployment.apps/website created
     service/website unchanged
-    </pre>
+    ```
 
     Verify if the pods are running
 
     ```bash
     kubectl get pods -n website
     ```
-   
-   --- 
 
-[:arrow_right: Module 6 - Runtime security with IDS/IPS using Deep Packet Inspection](module-6-runtimesec.md ) <br>
+   ---
+
+[:arrow_right: Module 6 - Runtime security with IDS/IPS using Deep Packet Inspection](module-6-runtimesec.md )  
 
 [:arrow_left: Module 4 - Scan Container Images](module-4-scan-images.md)
 

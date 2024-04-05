@@ -2,7 +2,7 @@
 
 ## Installing WireGuard
 
-Before enabling end-to-end encryption with Calico, you must first install WireGuard. Please refer to the instructions available here for your OS: https://www.wireguard.com/install/
+Before enabling end-to-end encryption with Calico, you must first install WireGuard. Please refer to the instructions available here for your OS: [Wireguard Installation]<https://www.wireguard.com/install/>
 
 Before enabling the encryption feature, test to ensure that the wireguard module is loaded on each of the 2 worker nodes:
 
@@ -78,7 +78,7 @@ wireguard.cali: flags=209<UP,POINTOPOINT,RUNNING,NOARP>  mtu 1340
 
 ## Enable WireGuard Statistics
 
-With end-to-end encryption enabled the next step is to enable statistics gathering in Prometheus. 
+With end-to-end encryption enabled the next step is to enable statistics gathering in Prometheus.
 
 First, we'll patch the Tigera Operator to enable the 'nodeMetricsPort':
 
@@ -177,13 +177,13 @@ EOF
 And now we should be able to see the Wireguard stats on the Calico Cloud dashboard by enabling them through the configuration menu
 The Dashboard should now show the Wireguard stastics.
 
-#### Reference Documentation
+### Reference Documentation
 
 [Encrypt Data in Transit](https://docs.tigera.io/compliance/encrypt-cluster-pod-traffic)
 
 [Install Wireguard](https://www.wireguard.com/install/)
 
-[:arrow_right: Module 9 - Traffic visualization inside your Kubernetes Cluster](module-9-visibility.md) <br>
+[:arrow_right: Module 9 - Traffic visualization inside your Kubernetes Cluster](module-9-visibility.md)  
 
 [:arrow_left: Module 7 - Zero-trust access control using Network Policy Recommender](module-7-zerotrust.md)
 

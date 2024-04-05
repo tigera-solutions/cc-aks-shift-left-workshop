@@ -30,6 +30,6 @@
 
 ---
 
-[:arrow_left: Module 9 - Traffic visualization inside your Kubernetes Cluster](module-9-visibility.md) <br>
+[:arrow_left: Module 9 - Traffic visualization inside your Kubernetes Cluster](module-9-visibility.md)  
 
 [:leftwards_arrow_with_hook: Back to Main](../README.md)

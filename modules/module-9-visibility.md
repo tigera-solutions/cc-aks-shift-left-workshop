@@ -10,7 +10,7 @@ Connect to Calico Cloud GUI. From the menu select `Service Graph > Flow Visualiz
 
 ---
 
-[:arrow_right: Module 10 - Clean up](module-10-cleanup.md)  <br>
+[:arrow_right: Module 10 - Clean up](module-10-cleanup.md)  
 
 [:arrow_left: Module 8 - Enabling End to End Encryption with WireGuard](module-8-encryption.md)
 

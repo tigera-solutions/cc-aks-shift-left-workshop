@@ -10,7 +10,7 @@ The following are the basic requirements to **start** the workshop.
 
 ## Instructions
 
-1. Login to Azure Portal at http://portal.azure.com.
+1. Login to Azure Portal at <http://portal.azure.com>.
 2. Open the Azure Cloud Shell and choose Bash Shell (do not choose Powershell)
 
    ![img-cloud-shell](https://user-images.githubusercontent.com/104035488/214944180-0b72595f-b58d-445d-9bde-2530bd491ace.png)
@@ -70,6 +70,6 @@ The following are the basic requirements to **start** the workshop.
 
 ---
 
-[:arrow_right: Module 2 - Deploy an AKS cluster](module-2-deploy-aks.md) <br>
+[:arrow_right: Module 2 - Deploy an AKS cluster](module-2-deploy-aks.md)  
 
 [:leftwards_arrow_with_hook: Back to Main](../README.md)

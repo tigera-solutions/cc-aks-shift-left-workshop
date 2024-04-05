@@ -1,6 +1,6 @@
 # Module 4 - Scan Container Images
 
-## Install the CLI `tigera-scanner` 
+## Install the CLI `tigera-scanner`
 
 1. Download the latest version of the Tigera CLI scanner.
 
@@ -50,7 +50,7 @@ Lets pull an image:
 
    This command will scan the image and present all the vulnerabilities found on it. However, as we didn't define the threshold for `PASS`, `WARN` or `FAIL` results, the reported `Scan result:` will be `UNKNOWN`.
 
-   <pre>
+   ```bash
    $ tigera-scanner scan registry.hub.docker.com/regisftm/website:v1.0.0
    INFO[0000] Vulnerability database director not set, setting it to the cache default direct /home/ec2-user/.cache.
 
@@ -71,7 +71,7 @@ Lets pull an image:
    |            |          |                |      | libcurl might erroneously      |                      |       
    ...
    [omitted output]
-   </pre>
+   ```
 
    Scan the image again, but now define the thresholds using --fail_threshold (or -f) and --warn_threshold (or -w)
 
@@ -107,7 +107,7 @@ Lets pull an image:
 
    This is the expected output.
 
-   <pre>
+   ```bash
    $ tigera-scanner scan registry.hub.docker.com/regisftm/website:v1.0.0 --apiurl $APIURL --token $APITOKEN
    INFO[0001] Vulnerability database director not set, setting it to the cache default direct /home/ec2-user/.cache.
 
@@ -124,13 +124,13 @@ Lets pull an image:
     Total vulnerabilities: 10, critical: 4, high: 6, medium: 0, low: 0, N/A: 0 
 
     Scan result:   ⚠ WARN (warn_threshold - 3.9, fail_threshold - 7.9, Using thresholds from Calico Cloud)  
-    </pre>
+    ```
 
      Now you can visualize the scan results in the Calico Cloud UI.
 
 ---
 
-[:arrow_right: Module 5 - Calico Cloud Admission Controller](module-5-admission-controller.md) <br>
+[:arrow_right: Module 5 - Calico Cloud Admission Controller](module-5-admission-controller.md)  
 
 [:arrow_left: Module 3 - Connect the cluster to Calico Cloud](module-3-connect-calicocloud.md)
 

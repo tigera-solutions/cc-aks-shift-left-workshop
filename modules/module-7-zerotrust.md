@@ -148,7 +148,7 @@ We recommend that you create a global default deny policy after you complete wri
 
 3. Use the Calico Cloud GUI to enforce the default-deny staged policy. After enforcing a staged policy, it takes effect immediatelly. The default-deny policy will start to actually deny traffic.
 
-[:arrow_right: Module 8 - Enabling End to End Encryption with WireGuard](module-8-encryption.md) <br>
+[:arrow_right: Module 8 - Enabling End to End Encryption with WireGuard](module-8-encryption.md)  
 
 [:arrow_left: Module 6 - Runtime security with IDS/IPS using Deep Packet Inspection](module-6-runtimesec.md)
 

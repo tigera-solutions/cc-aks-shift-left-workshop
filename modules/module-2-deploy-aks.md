@@ -59,11 +59,11 @@
 
    You may get an output like the following
 
-   <pre>
+   ```bash
    Name                     Location       ResourceGroup              KubernetesVersion    CurrentKubernetesVersion    ProvisioningState    Fqdn
    -----------------------  -------------  -------------------------  -------------------  --------------------------  -------------------  -----------------------------------------------------------------------
    aks-shift-left-workshop                canadacentral  rg-shift-left-workshop                1.25                 1.25.6                      Succeeded          aks-shift--rg-shift-left-wo-03cfb8-z5n2y68t.hcp.canadacentral.azmk8s.io
-   </pre>
+   ```
 
 5. Get the credentials to connect to the cluster.
 
@@ -79,11 +79,11 @@
 
    The output will ne something similar to the this:
 
-   <pre>
+   ```bash
     NAME                                STATUS   ROLES   AGE    VERSION
     aks-nodepool1-24664026-vmss000000   Ready    agent   7m1s   v1.25.6
     aks-nodepool1-24664026-vmss000001   Ready    agent   7m4s   v1.25.6
-   </pre>
+   ```
 
    To see more details about your cluster:
 
@@ -92,13 +92,14 @@
    ```
 
    The output will ne something similar to the this:
-   <pre>
+
+   ```bash
     Kubernetes control plane is running at https://aks-shift--rg-shift-left-wo-03cfb8-z5n2y68t.hcp.canadacentral.azmk8s.io:443
     CoreDNS is running at https://aks-shift--rg-shift-left-wo-03cfb8-z5n2y68t.hcp.canadacentral.azmk8s.io:443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
     Metrics-server is running at https://aks-shift--rg-shift-left-wo-03cfb8-z5n2y68t.hcp.canadacentral.azmk8s.io:443/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy
 
     To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
-   </pre>
+   ```
 
    You should now have a Kubernetes cluster running with 2 nodes. You do not see the master servers for the cluster because these are managed by Microsoft. The Control Plane services which manage the Kubernetes cluster such as scheduling, API access, configuration data store and object controllers are all provided as services to the nodes.
 
@@ -166,7 +167,7 @@ kubectl annotate svc nginx-svc -n dev projectcalico.org/l7-logging=true
 
 ---
 
-[:arrow_right: Module 3 - Connect the cluster to Calico Cloud](module-3-connect-calicocloud.md) <br>
+[:arrow_right: Module 3 - Connect the cluster to Calico Cloud](module-3-connect-calicocloud.md)  
 
 [:arrow_left: Module 1 - Getting Started](module-1-getting-started.md)
 

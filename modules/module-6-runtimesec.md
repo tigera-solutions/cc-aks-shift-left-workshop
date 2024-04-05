@@ -6,7 +6,7 @@ malicious workloads to thwart an attack. It monitors inbound and outbound traffi
 that is traversing the cluster environment. Calico provides threat feed integration and custom alerts, and can be
 configured to trigger automatic remediation.
 
-### IDS/IPS with Deep Packet Inspection
+## IDS/IPS with Deep Packet Inspection
 
 1. Create the DPI and the Intrusion Detection for the dev/nginx service.
 
@@ -39,7 +39,7 @@ configured to trigger automatic remediation.
 
 2. Attack the nginx service
 
-   [Sid 1-21562 - MALWARE-CNC Win.Trojan.Bredolab variant outbound connection](https://www.snort.org/rule_docs/1-21562) 
+   [Sid 1-21562 - MALWARE-CNC Win.Trojan.Bredolab variant outbound connection](https://www.snort.org/rule_docs/1-21562)
 
    ```bash
    kubectl -n dev exec -t netshoot -- sh -c "curl -m2 http://nginx-svc/ -H 'User-Agent: Mozilla/4.0' -XPOST --data-raw 'smk=1234'"
@@ -71,7 +71,7 @@ Next, we can take action in securing our nginx pod with a zero-trust approach us
 
 ---
 
-[:arrow_right: Module 7 - Zero-trust access control using Network Policy Recommender](module-7-zerotrust.md) <br>
+[:arrow_right: Module 7 - Zero-trust access control using Network Policy Recommender](module-7-zerotrust.md)  
 
 [:arrow_left: Module 5 - Calico Cloud Admission Controller](module-5-admission-controller.md)
 
